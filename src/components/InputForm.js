@@ -16,7 +16,10 @@ const InputForm = ({ taskList, setTaskList }) => {
   const handleSubmit = (e) => {
     console.log("a");
     e.preventDefault();
-    setTaskList([...taskList, { text: inputText, id: generateUniqueId() }]);
+    setTaskList([
+      ...taskList,
+      { text: inputText, id: generateUniqueId(), completed: false },
+    ]);
     setInputText("");
   };
 
